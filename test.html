@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="stylesheet" type="text/css" href="hm.css">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="d3heatmap.js"></script>
+  </head>
+  <body>
+  <div style="width: 100%; margin: 0 auto; float: left; padding-left: 168px">
+    <div id="legend" style="display: inline-block; padding-right: 230px">
+    </div>
+    <div id="buttons" style="display: inline-block">
+      <ul>
+        <li><input type="checkbox" id="checkInitial" onclick="toggleIRF()" checked="true"/>
+          <label for="checkInitial">
+            <svg height="50" width="100">
+              <g>
+                <circle cx="25" cy="25" r="18" stroke="black" stroke-width="1" fill="#CECECE"/>
+                <text x="53" y="25" font-weight="bold" font-family="roboto" font-size="14px" fill="#696768">Initial</text>
+              </g>
+            </svg>
+          </label>
+        </li>
+        <li><input type="checkbox" id="checkRevised" onclick="toggleIRF()" checked="true"/>
+          <label for="checkRevised">
+            <svg height="50" width="114">
+              <g>
+                <circle cx="25" cy="25" r="18" stroke="black" stroke-width="1" fill="white"/>
+                <text x="53" y="25" font-weight="bold" font-family="roboto" font-size="14px" fill="#696768">Revised</text>
+              </g>
+            </svg>
+          </label>
+        </li>
+        <li><input type="checkbox" id="checkFuture" onclick="toggleIRF()" checked="true"/>
+          <label for="checkFuture">
+            <svg height="50" width="100">
+              <g>
+                <circle cx="25" cy="25" r="18" stroke="black" stroke-width="1" fill="black"/>
+                <text x="53" y="25" font-weight="bold" font-family="roboto" font-size="14px" fill="#696768">Future</text>
+              </g>
+            </svg>
+          </label>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div id="newHeatMap"></div>
+  <script>
+    init();
+  </script>
+  </body>
+</html>
